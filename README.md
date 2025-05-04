@@ -39,7 +39,7 @@ This will start:
 
 ### **4. Access the Application**
 - API docs: [http://localhost:8000/docs](http://localhost:8000/docs)
-- Minimal UI: [http://localhost:8000/](http://localhost:8000/)
+- Homepage: [http://localhost:8000/](http://localhost:8000/)
 
 ---
 
