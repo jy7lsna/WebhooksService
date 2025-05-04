@@ -119,7 +119,7 @@ This will start:
 - Free tier resources are sufficient for moderate traffic and log retention.
 - Email notifications, advanced analytics, and UI polish are out of scope.
 
-## 🙏 Credits
+## Credits
 
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Celery](https://docs.celeryq.dev/)
@@ -129,6 +129,7 @@ This will start:
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
 - [Render](https://render.com/) / [Heroku](https://heroku.com/) (for deployment)
 - [OpenAI / Perplexity AI](https://www.perplexity.ai/) (for AI assistance)
+- Perplexity AI
 
 
 ##🧪 Testing
