@@ -7,8 +7,6 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 ## 🚀 Live Demo
 
 [**Live Deployed Application**](https://your-deployment-url.com)  
-*(Replace with your actual deployment link)*
-
 ---
 
 ## 🐳 Quick Start: Running Locally with Docker
