@@ -8,8 +8,8 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 
 [**Live Deployed Application**](https://your-deployment-url.com)  
 --- In process 
-<video src="assets/recording.mp4"controlswidth="600"></video>
-<img src="assets/ui.png"width="600"/>
+<video src="/assets/recording.mp4"controlswidth="600"></video>
+<img src="/assets/ui.png"width="600"/>
 
 
 ## 🐳 Quick Start: Running Locally with Docker
