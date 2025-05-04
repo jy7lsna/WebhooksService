@@ -39,7 +39,7 @@ async def read_root():
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Minimal UI</title>
+        <title>Webhook Service</title>
         <style>
             body { 
             font-family: sans-serif; 
