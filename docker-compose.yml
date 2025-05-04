@@ -1,0 +1,87 @@
+<<<<<<< HEAD
+version: "3.8"
+
+services:
+=======
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/webhooks
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+
+  worker:
+    build: .
+    command: celery -A app.tasks.celery worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/webhooks
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+
+>>>>>>> 65cd0d2 (Initial Commit)
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+<<<<<<< HEAD
+      POSTGRES_PASSWORD: Jesusitrustu123!
+      POSTGRES_DB: webhooks
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  web:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:Jesusitrustu123!@db:5432/webhooks
+      - REDIS_URL=redis://:ZNLKvVMt48yzpiEjH25z1Sti5ayH7rif@redis-16500.c81.us-east-1-2.ec2.redns.redis-cloud.com:16500/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  worker:
+    build: .
+    command: celery -A app.tasks.celery worker --loglevel=info --pool=solo
+    environment:
+      - DATABASE_URL=postgresql://postgres:Jesusitrustu123!@db:5432/webhooks
+      - REDIS_URL=redis://:ZNLKvVMt48yzpiEjH25z1Sti5ayH7rif@redis-16500.c81.us-east-1-2.ec2.redns.redis-cloud.com:16500/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+=======
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: webhooks
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+>>>>>>> 65cd0d2 (Initial Commit)
+
+volumes:
+  pgdata:
