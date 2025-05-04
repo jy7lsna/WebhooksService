@@ -1,28 +1,20 @@
-<<<<<<< HEAD
 import os
-from dotenv import load_dotenv
-=======
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from app.models import Base
-
-DATABASE_URL = "sqlite:///./test.db"  # Use PostgreSQL if you prefer
-
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-def init_db():
-    Base.metadata.create_all(bind=engine)
->>>>>>> 65cd0d2 (Initial Commit)
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from app.config import DATABASE_URL
+from dotenv import load_dotenv
 
-<<<<<<< HEAD
+# Load environment variables from .env file
 load_dotenv()
 
+# Get DATABASE_URL from environment or config
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
+
 # Create SQLAlchemy engine
-engine = create_engine(DATABASE_URL)
+# For SQLite, need connect_args; for PostgreSQL, remove connect_args
+if DATABASE_URL.startswith("sqlite"):
+    engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+else:
+    engine = create_engine(DATABASE_URL)
 
 # Create a configured "Session" class
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -30,23 +22,14 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Base class for models
 Base = declarative_base()
 
-# Dependency for getting DB session
-=======
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
-
->>>>>>> 65cd0d2 (Initial Commit)
+# Dependency for getting DB session (for FastAPI)
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
-<<<<<<< HEAD
 
 # Optional: Function to initialize tables (if needed)
 def init_db():
     Base.metadata.create_all(bind=engine)
-=======
->>>>>>> 65cd0d2 (Initial Commit)
