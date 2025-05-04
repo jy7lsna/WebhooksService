@@ -132,8 +132,6 @@ This will start:
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
 - [Render](https://render.com/) / [Heroku](https://heroku.com/) (for deployment)
 - [OpenAI / Perplexity AI](https://www.perplexity.ai/) (for AI assistance)
-- Perplexity AI
-
 
 ##🧪 Testing
 - Use `pytest` for unit/integration tests (see `/tests` folder).
