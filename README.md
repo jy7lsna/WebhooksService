@@ -8,16 +8,16 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 
 [**Live Deployed Application**](https://your-deployment-url.com)  
 --- In process 
-<video src="https://github.com/yourusername/yourrepo](https://github.com/jy7lsna/WebhooksService/assets/recording.mp4" controls width="600"></video>
-<img src="ui.png" width="600" />
+<video src="assets/recording.mp4"controlswidth="600"></video>
+<img src="assets/ui.png"width="600"/>
 
 
 ## 🐳 Quick Start: Running Locally with Docker
 
-### **Prerequisites**
-- [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed
+###**Prerequisites**
+-[Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed
 
-### **1. Clone the Repository**
+###**1. Clone the Repository**
 ```git clone https://github.com/jy7lsna/WebhooksService.git```
 ```cd WebhooksService```
 
