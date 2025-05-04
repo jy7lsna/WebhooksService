@@ -24,12 +24,16 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 
 
 ### **2. Copy the Example Environment File**
-```cp .env.example .env```
+```bash
+cp .env.example .env
+```
 
 Edit `.env` to set your database/Redis credentials if needed.
 
 ### **3. Build and Start the Stack**
-```docker-compose up --build```
+```bash
+docker-compose up --build
+```
 
 This will start:
 - FastAPI API server
@@ -81,38 +85,50 @@ This will start:
 ## 📋 API Usage Examples (cURL)
 
 ### **Create a Subscription**
-```curl -X POST http://localhost:8000/subscriptions```
-```-H "Content-Type: application/json"```
-```-d '{"target_url":"https://webhook.site/your-url","event_type":["order.created"],"secret":"mysecret"}'```
+```bash
+  curl -X POST http://localhost:8000/subscriptions
+  -H "Content-Type: application/json"  
+  -d '{"target_url":"https://webhook.site/your-url","event_type":["order.created"],"secret":"mysecret"}
+```
 
 
 ### **List Subscriptions**
 ```curl http://localhost:8000/subscriptions```
 
 ### **Update a Subscription**
-```curl -X PUT http://localhost:8000/subscriptions/1```
-```-H "Content-Type: application/json"```
-```-d '{"target_url":"https://webhook.site/your-new-url","event_type":["order.updated"]}'```
+```bash
+curl -X PUT http://localhost:8000/subscriptions/1
+-H "Content-Type: application/json"
+-d '{"target_url":"https://webhook.site/your-new-url","event_type":["order.updated"]}
+```
 
 
 ### **Delete a Subscription**
-```curl -X DELETE http://localhost:8000/subscriptions/1```
+```bash
+curl -X DELETE http://localhost:8000/subscriptions/1
+```
 
 
 ### **Ingest a Webhook**
-```curl -X POST http://localhost:8000/ingest/1```
--H "Content-Type: application/json"```
-```-H "X-Hub-Signature-256: sha256=..."```
-```-H "event_type: order.created"```
-```-d '{"order_id":123,"amount":49.99}'```
+```bash
+curl -X POST http://localhost:8000/ingest/1
+-H "Content-Type: application/json"
+-H "X-Hub-Signature-256: sha256=..."
+-H "event_type: order.created"
+-d '{"order_id":123,"amount":49.99}'
+```
 
 
 ### **Check Delivery Status**
-```curl http://localhost:8000/status/<delivery_id>```
+```bash
+curl http://localhost:8000/status/<delivery_id>
+```
 
 
 ### **Get Recent Logs for a Subscription**
-```curl http://localhost:8000/subscriptions/1/logs```
+```bash
+curl http://localhost:8000/subscriptions/1/logs
+```
 
 ## 📝 Assumptions
 
