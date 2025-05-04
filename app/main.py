@@ -16,9 +16,7 @@ SQLALCHEMY_DATABASE_URL = os.environ["DATABASE_URL"]
 
 app = FastAPI(title="Webhook Delivery Service")
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
+from app.database import engine, SessionLocal, Base  # Use the centralized config
 
 # Dependency
 def get_db():
@@ -148,7 +146,7 @@ async def ingest_webhook(
     db: Session = Depends(get_db)
         ):
     # Get the raw body for signature verification
-    raw_body = json.dumps(payload.model_dump(), separators=(',', ':')).encode('utf-8')
+    raw_body = json.dumps(jsonable_encoder(payload), separators=(',', ':')).encode('utf-8')
 
     sub = crud.get_subscription(db, subscription_id)
     if not sub:
