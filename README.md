@@ -15,10 +15,10 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 
 ## 🐳 Quick Start: Running Locally with Docker
 
-###**Prerequisites**
--[Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed
+## Prerequisites
+[Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed
 
-###**1. Clone the Repository**
+### **1. Clone the Repository**
 ```git clone https://github.com/jy7lsna/WebhooksService.git```
 ```cd WebhooksService```
 
