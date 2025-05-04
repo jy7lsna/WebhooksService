@@ -15,8 +15,8 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 - [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed
 
 ### **1. Clone the Repository**
-```git clone https://github.com/yourusername/your-repo.git```
-```cd your-repo```
+```git clone https://github.com/jy7lsna/WebhooksService.git```
+```cd WebhooksService```
 
 
 ### **2. Copy the Example Environment File**
