@@ -6,9 +6,9 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 
 ## 🚀 Live Demo
 
-[Live Deployed Application](https://webhooksservice-4.onrender.com/) 
+## **[Live Deployed Application](https://webhooksservice-4.onrender.com/)**
 
-![recording](https://github.com/user-attachments/assets/b3035ab4-bf7b-4b37-9f60-5e27392e2ad4)
+![recording](https://github.com/user-attachments/assets/b3035ab4-bf7b-4b37-9f60-5e27392e2ad4) 
 ![ui](https://github.com/user-attachments/assets/9d6d064b-c94d-47d1-9b80-b75d8a871a5e)
 
 
@@ -148,5 +148,5 @@ curl http://localhost:8000/subscriptions/1/logs
 - [Render](https://render.com/) / [Heroku](https://heroku.com/) (for deployment)
 - [OpenAI / Perplexity AI](https://www.perplexity.ai/) (for AI assistance)
 
-##🧪 Testing
+## 🧪 Testing
 - Use `pytest` for unit/integration tests (see `/tests` folder).
