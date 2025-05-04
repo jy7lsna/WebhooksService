@@ -15,11 +15,8 @@ def verify_signature(secret: str, payload: bytes, signature_header: str) -> bool
         signature = signature_header[len(sig_prefix):]
         mac = hmac.new(secret.encode(), msg=payload, digestmod=hashlib.sha256)
         expected_sig = mac.hexdigest()
-<<<<<<< HEAD
         return hmac.compare_digest(expected_sig.lower(), signature.lower())
-=======
         return hmac.compare_digest(expected_sig, signature)
->>>>>>> 65cd0d2 (Initial Commit)
     except Exception:
         return False
 
