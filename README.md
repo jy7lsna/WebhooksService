@@ -9,7 +9,7 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 [**Live Deployed Application**](https://your-deployment-url.com)  
 --- In process 
 <video src="https://github.com/yourusername/yourrepo](https://github.com/jy7lsna/WebhooksService/assets/recording.mp4" controls width="600"></video>
-<img src="ui.png" width="300" />
+<img src="ui.png" width="600" />
 
 
 ## 🐳 Quick Start: Running Locally with Docker
