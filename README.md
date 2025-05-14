@@ -145,7 +145,7 @@ curl http://localhost:8000/subscriptions/1/logs
 - [Redis](https://redis.io/)
 - [Docker](https://www.docker.com/)
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
-- [Render](https://render.com/) / [Heroku](https://heroku.com/) (for deployment)
+- [Render](https://render.com/) (for deployment)
 - [OpenAI / Perplexity AI](https://www.perplexity.ai/) (for AI assistance)
 
 ## 🧪 Testing
