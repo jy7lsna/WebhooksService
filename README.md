@@ -25,7 +25,7 @@ A robust, containerized backend system for reliable webhook delivery with retrie
 
 ### **2. Copy the Example Environment File**
 ```bash
-cp .env.example .env
+cp .env
 ```
 
 Edit `.env` to set your database/Redis credentials if needed.
